@@ -3,6 +3,7 @@ const websites = require('./websites.json')
 
 const request = require('request-promise')
 const jsdom = require('jsdom')
+const notifier = require('node-notifier')
 const open = require('open');
 const chalk = require('chalk')
 
@@ -15,6 +16,13 @@ function checkAvailability() {
                 if (config.enableLogs) console.log(chalk.red(`${website.name} :\t${textFound}`))
             } else {
                 if (config.enableLogs) console.log(chalk.green.bold(`${website.name} :\t${config.availableText}`))
+                notifier.notify({
+                    title: 'PS5 Scrapper',
+                    message: `${config.availableText} chez ${website.name}`,
+                    sound: true,
+                    wait: true
+                });
+                notifier.on('click', (notifierObject, options) => open(website.url))
                 open(website.url)
             }
         }).catch(err => console.error(chalk.bgRed(err)))
