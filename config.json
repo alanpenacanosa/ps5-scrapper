@@ -1,0 +1,7 @@
+{
+  "_comment": "Les variables qui ont une clé qui commence par '_' sont des commentaires, y'a pas de commentaire en json, je fais ce que je peux.",
+  "_comment": "Temps en minutes",
+  "timeBetweenRequests": 5,
+  "enableLogs": true,
+  "availableText": "Produit en stock !"
+}

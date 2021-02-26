@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Digitec",
+    "url": "https://www.digitec.ch/fr/s1/product/sony-playstation-5-de-fr-it-en-consoles-de-jeu-12664145",
+    "selector": "span.availabilityText > div > div",
+    "expecting": "Non disponible pour le moment et aucune date de livraison prévue."
+  },
+  {
+    "name": "Mediamarkt",
+    "url": "https://www.mediamarkt.ch/fr/product/_sony-ps-playstation-5-2018096.html",
+    "selector": "span.offline-text",
+    "expecting": "Article temporairement pas en stock"
+  }
+]

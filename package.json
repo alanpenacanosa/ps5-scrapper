@@ -1,0 +1,19 @@
+{
+  "name": "ps5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ps5.js",
+  "scripts": {
+    "start": "node ps5.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "jsdom": "^16.4.0",
+    "open": "^7.4.2",
+    "request-promise": "^4.2.6"
+  }
+}
