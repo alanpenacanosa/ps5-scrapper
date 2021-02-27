@@ -1,8 +1,8 @@
 # PS5 Scrapper
 
-*Si tu en as marre de pas pouvoir acheter une console à 500.- pour pouvoir jouer au nouveau Fifa qui est identique au 5 derniers tu es au bon endroit !*
+*Si tu en as marre de pas pouvoir acheter une console à 500.- pour pouvoir jouer au nouveau Fifa qui est identique aux cinq derniers tu es au bon endroit !*
 
-**Instructions pour faire tourner PS5 Scrapper sur ta machine.**
+**Application qui tourne en arrière-plan et qui fait toutes les cinq minutes une requête pour voir la disponibilitée de la PS5 et si elle est disponnible sur l'un des sites la page du produit est ouvert et une notification est envoyé.** (Le temps et les sites web sont paramétrable, voir la section [configuration](#configuration))
 
 ## Installation
 Clone ce repo soit en téléchargeant les sources en ZIP soit avec la commande suivante depuis le dossier ou tu souhaites télécharger cette application : `git clone https://github.com/alanpenacanosa/ps5-scrapper.git` (pour cette dernière il faut que tu aies git d'installer bien sûr).
