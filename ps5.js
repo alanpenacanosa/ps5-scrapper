@@ -1,11 +1,11 @@
 const config = require('./config.json')
 const websites = require('./websites.json')
 
-const fetch = require('node-fetch');
+const fetch = require('node-fetch')
 const jsdom = require('jsdom')
-const notifier = require('node-notifier')
-const open = require('open');
 const chalk = require('chalk')
+const open = require('open')
+const notifier = require('node-notifier')
 
 function checkAvailability() {
     for (const website of websites) {
@@ -13,9 +13,9 @@ function checkAvailability() {
             .then(res => res.text())
             .then(html => {
                 const document = new jsdom.JSDOM(html).window.document
-                const textFound = document.querySelector(website.selector).textContent
-                if (textFound === website.expecting) {
-                    if (config.enableLogs) console.log(chalk.red(`${website.name} :\t${textFound}`))
+                const element = document.querySelector(website.selector)
+                if (element && element.textContent === website.expecting) {
+                    if (config.enableLogs) console.log(chalk.red(`${website.name} :\t${element.textContent}`))
                 } else {
                     if (config.enableLogs) console.log(chalk.green.bold(`${website.name} :\t${config.availableText}`))
                     notifier.notify({
