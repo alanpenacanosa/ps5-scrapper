@@ -2,7 +2,13 @@
   {
     "name": "Digitec",
     "url": "https://www.digitec.ch/fr/s1/product/sony-playstation-5-de-fr-it-en-consoles-de-jeu-12664145",
-    "selector": "span.availabilityText > div > div",
+    "selector": "main#pageContent > div > div > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(8) > div > span > span > span:nth-child(2) > div > div",
+    "expecting": "Non disponible pour le moment et aucune date de livraison prévue."
+  },
+  {
+    "name": "Digitec 2",
+    "url": "https://www.digitec.ch/fr/s1/product/sony-playstation-5-digital-edition-consoles-de-jeu-13329224",
+    "selector": "main#pageContent > div > div > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(7) > div > span > span > span:nth-child(2) > div > div",
     "expecting": "Non disponible pour le moment et aucune date de livraison prévue."
   },
   {
@@ -10,5 +16,23 @@
     "url": "https://www.mediamarkt.ch/fr/product/_sony-ps-playstation-5-2018096.html",
     "selector": "span.offline-text",
     "expecting": "Article temporairement pas en stock"
+  },
+  {
+    "name": "Microspot",
+    "url": "https://www.microspot.ch/fr/ordinateurs-et-jeux/jeux/consoles-de-jeux--c211000/sony-playstation-5-digital-edition-825-gb--p0002509351",
+    "selector": "div.sticky-container > div:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(3) > div:nth-child(2) > div > ul > li span",
+    "expecting": "Cet article ne peut pas être livré actuellement. "
+  },
+  {
+    "name": "Melectronics",
+    "url": "https://www.melectronics.ch/fr/p/785445800000/sony-playstation-5-digital-edition",
+    "selector": "div#app > div > div > main > div > div > div:nth-child(4) > div > div:nth-child(3) > div > p",
+    "expecting": "Non disponible"
+  },
+  {
+    "name": "Interdiscount",
+    "url": "https://www.interdiscount.ch/fr/ordinateurs-et-jeux/jeux/consoles-de-jeux--c211000/sony-playstation-5--p0002509350",
+    "selector": "div#TOP_CONTENT_ANCHOR > div > div > div:nth-child(2) > div:nth-child(3) > div:nth-child(2) > div > div > div > div",
+    "expecting": "Actuellement indisponible"
   }
 ]

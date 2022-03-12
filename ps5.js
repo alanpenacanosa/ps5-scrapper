@@ -8,6 +8,7 @@ const open = require('open')
 const notifier = require('node-notifier')
 
 function checkAvailability() {
+    console.log(chalk.italic.underline.bold(`\n${Date()}`))
     for (const website of websites) {
         fetch(website.url)
             .then(res => res.text())
@@ -17,10 +18,11 @@ function checkAvailability() {
                 if (element && element.textContent === website.expecting) {
                     if (config.enableLogs) console.log(chalk.red(`${website.name} :\t${element.textContent}`))
                 } else {
+                    console.log(chalk.magenta.bold(element.textContent))
                     if (config.enableLogs) console.log(chalk.green.bold(`${website.name} :\t${config.availableText}`))
                     notifier.notify({
                         title: 'PS5 Scrapper',
-                        message: `${config.availableText} chez ${website.name}`,
+                        message: `${config.availableText} - ${website.name}`,
                         sound: true,
                         wait: true
                     });
@@ -32,4 +34,4 @@ function checkAvailability() {
 }
 
 checkAvailability()
-setInterval(checkAvailability, config.timeBetweenRequests * 60 * 1000)
+setInterval(checkAvailability, config.timeBetweenRequestsInMinutes * 60 * 1000)
